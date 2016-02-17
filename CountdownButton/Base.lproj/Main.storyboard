@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u5S-kB-4gr" customClass="TimerButton">
+                                <rect key="frame" x="20" y="100" width="280" height="40"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="0oE-v1-I5S"/>
+                                    <constraint firstAttribute="width" constant="280" id="HEq-hw-aFj"/>
+                                </constraints>
+                                <state key="normal" title="1000">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9X6-MO-nhq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2qb-Tb-jtc" customClass="DisplayLinkButton">
+                                <rect key="frame" x="20" y="180" width="280" height="40"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="1000">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bcr-ga-IEJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XJb-Xd-fdY" customClass="DisplayLinkButton">
+                                <rect key="frame" x="20" y="260" width="280" height="40"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="start">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0fG-kx-nl3"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="XJb-Xd-fdY" firstAttribute="height" secondItem="2qb-Tb-jtc" secondAttribute="height" id="3k7-Kk-fou"/>
+                            <constraint firstItem="XJb-Xd-fdY" firstAttribute="width" secondItem="2qb-Tb-jtc" secondAttribute="width" id="FZF-ZI-dwM"/>
+                            <constraint firstItem="2qb-Tb-jtc" firstAttribute="top" secondItem="u5S-kB-4gr" secondAttribute="bottom" constant="40" id="N2a-gg-Z2y"/>
+                            <constraint firstItem="u5S-kB-4gr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RkF-JH-9s9"/>
+                            <constraint firstItem="2qb-Tb-jtc" firstAttribute="height" secondItem="u5S-kB-4gr" secondAttribute="height" id="iHJ-gK-gWI"/>
+                            <constraint firstItem="2qb-Tb-jtc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lEX-Il-Ws2"/>
+                            <constraint firstItem="XJb-Xd-fdY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qG5-qN-Z1Q"/>
+                            <constraint firstItem="u5S-kB-4gr" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="100" id="sbL-MZ-9BK"/>
+                            <constraint firstItem="XJb-Xd-fdY" firstAttribute="top" secondItem="2qb-Tb-jtc" secondAttribute="bottom" constant="40" id="tyi-YT-sp0"/>
+                            <constraint firstItem="2qb-Tb-jtc" firstAttribute="width" secondItem="u5S-kB-4gr" secondAttribute="width" id="z0j-or-UcC"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="button" destination="XJb-Xd-fdY" id="xqT-pf-MSw"/>
+                        <outlet property="displayLinkButton" destination="2qb-Tb-jtc" id="ftP-pl-URW"/>
+                        <outlet property="timerButton" destination="u5S-kB-4gr" id="eRO-Hs-ArV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="200" y="289"/>
+        </scene>
+    </scenes>
+</document>
